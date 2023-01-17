@@ -76,10 +76,23 @@ comments = Comment.create([
     },
     {
         name: "Jane Doe",
+        email: "Janedoe@gmail.com",
+        comment: "This is a comment",
+        post_id: 1
+
+    },
+    {
+        name: "Jane Doe",
         email: "guhy@gmail.com",
         comment: "This is a comment",
         post_id: 2
 
+    },
+    {
+        name: "John Doe",
+        email: "joy@gmail.com",
+        comment: "This is a comment",
+        post_id: 2
     }
 
 
