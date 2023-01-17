@@ -6,6 +6,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.string :featured_image
       t.boolean :featured_post , default: false
       t.references :category, null: false, foreign_key: true
+      t.references :author, null: false, foreign_key: true
      
       t.timestamps
     end

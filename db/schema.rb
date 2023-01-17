@@ -41,11 +41,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_17_103302) do
     t.string "featured_image"
     t.boolean "featured_post", default: false
     t.integer "category_id", null: false
+    t.integer "author_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_posts_on_author_id"
     t.index ["category_id"], name: "index_posts_on_category_id"
   end
 
   add_foreign_key "comments", "posts"
+  add_foreign_key "posts", "authors"
   add_foreign_key "posts", "categories"
 end
