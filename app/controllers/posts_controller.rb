@@ -25,6 +25,18 @@ class PostsController < ApplicationController
         @post.destroy
     end
 
+    def recent_posts 
+        @posts = Post.all.order(created_at: :desc).limit(3)
+        render json: @posts , include: [:category, :author, :comments]
+    end
+
+    def related_posts
+        @post = Post.find(params[:id])
+        @posts = Post.where(category_id: @post.category_id).where.not(id: @post.id).limit(3)
+        render json: @posts , include: [:category, :author, :comments]
+    end
+
+
     private
 
     def post_params

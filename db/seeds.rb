@@ -56,6 +56,24 @@ posts = Post.create([
         content:"This is the content of post 2",
         featured_image: "https://picsum.photos/200/300",
         featured_post: true,
+        category_id: 1,
+        author_id: 1,
+    },
+    {
+        title: "Post 3",
+        content:"This is the content of post 3",
+        featured_image: "https://picsum.photos/200/300",
+        featured_post: true,
+
+        category_id: 2,
+
+        author_id: 2,
+    },
+    {
+        title: "Post 4",
+        content:"This is the content of post 4",
+        featured_image: "https://picsum.photos/200/300",
+        featured_post: true,
 
         category_id: 2,
 
